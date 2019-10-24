@@ -41,11 +41,11 @@ Returns the location of the binary.
 headless
 Returns whether or not the headless argument is set
 
-###preferences
+### preferences
 Returns a dict of preferences.
 
-###profile
+### profile
 Returns the Firefox profile to use.
 
-###proxy
+### proxy
 returns Proxy if set otherwise None.
