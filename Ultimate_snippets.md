@@ -36,6 +36,30 @@ images = browser.find_elements_by_tag_name("img")
 for image in images:
   print(image.get_attribute("alt"))	
 ```
+## Get screenshot of file
+```
+driver.get_screenshot_as_file("filename.png")
+```
+
+## Scroll to the bottom of the page
+```
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+```
+## Open new tab
+```
+browser.execute_script("window.open('new window')")
+```
+## manage newly opened tabs
+```
+browser.switch_to.window(browser.window_handles[1])
+```
+## Open new tabs and manage them 
+```
+tabNum = 0
+browser.execute_script("window.open('new window')")
+browser.switch_to.window(browser.window_handles[tabNum])
+```      
+
 ## Twitter SEO
 ```
 twitter_site = browser.find_element_by_css_selector("meta[name='twitter\\:site']")
