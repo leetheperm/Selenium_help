@@ -1,27 +1,27 @@
 # Ultimate Selenium snippets
 
 ## Chrome options
-
+```
 from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-gpu')
-
+```
 ## Firefox options
-
+```
 from selenium.webdriver.firefox.options import Options
 options = Options()
 options.headless = True
-
+```
 
 ## Init default
-
+```
 self.driver = webdriver.Firefox(options = options, executable_path='/Users/yourname/yourpath')
 self.driver = webdriver.Chrome(options = options, executable_path='/Users/yourname/yourpath')
-
+```
 ## print all links
-
+```
 links = browser.find_elements_by_css_selector("a")
 for link in links:
   try:
@@ -29,15 +29,15 @@ for link in links:
     print(link.get_attribute('href'))
   except:
     continue
-
+```
 ## Print all alt text for images
-
+```
 images = browser.find_elements_by_tag_name("img")
 for image in images:
   print(image.get_attribute("alt"))	
-
+```
 ## Twitter SEO
-
+```
 twitter_site = browser.find_element_by_css_selector("meta[name='twitter\\:site']")
 print('twitter site: ', end ='')
 print(twitter_site.get_attribute('content'))
@@ -57,9 +57,9 @@ print(twitter_title.get_attribute('content'))
 twitter_description = browser.find_element_by_css_selector("meta[name='twitter\\:description']")
 print('twitter dexcription: ', end ='')
 print(twitter_description.get_attribute('content'))		
-
+```
 ## Facebook SEO
-
+```
 facebook_site = browser.find_element_by_css_selector("meta[property='og:site_name']")
 print('Facebook site: ', end ='')
 print(facebook_site.get_attribute('content'))
@@ -75,9 +75,9 @@ print(facebook_title.get_attribute('content'))
 facebook_description = browser.find_element_by_css_selector("meta[property='og\\:description']")
 print('facebook description: ', end ='')
 print(facebook_description.get_attribute('content'))
-
+```
 ## Other SEO data
-
+```
 item_prop = browser.find_element_by_css_selector("meta[property='og\\:country-name']")
 print('country name: ', end ='')
 print(item_prop.get_attribute('content'))	
@@ -101,4 +101,4 @@ print(site_code.get_attribute('content'))
 page_title = browser.find_element_by_css_selector('meta[name="title"]')
 print('Page title: ', end ='')
 print(page_title.get_attribute('content'))
-
+```
