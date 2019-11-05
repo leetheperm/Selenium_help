@@ -13,6 +13,7 @@ options.add_argument('--disable-gpu')
 from selenium.webdriver.firefox.options import Options
 options = Options()
 options.headless = True
+options.set_preference("dom.popup_maximum", 150)
 ```
 
 ## Init default
