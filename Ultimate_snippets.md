@@ -1,4 +1,4 @@
-# Ultimate Selenium snippets
+# Ultimate Py-Selenium snippets
 
 ## Chrome options
 ```
