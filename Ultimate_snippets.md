@@ -61,6 +61,13 @@ browser.execute_script("window.open('new window')")
 browser.switch_to.window(browser.window_handles[tabNum])
 ```      
 
+## Xpath cheatsheet
+```
+search = driver.find_element_by_xpath('//*[@title="Search"]') # This works
+search = driver.find_element_by_xpath('//*[@name="q"]') # This works
+```
+source: https://devhints.io/xpath
+
 ## Twitter SEO
 ```
 twitter_site = browser.find_element_by_css_selector("meta[name='twitter\\:site']")
